@@ -68,6 +68,28 @@ public class FPSController : MonoBehaviour
         UpdateRigidbodyData();
         HandleDrag();
     }
+
+    //private void Update()
+    //{
+    //    Ray ray = new Ray(transform.position, transform.forward);
+    //    RaycastHit hit;
+
+    //    if (Physics.Raycast(ray, out hit, OpenDistance))
+    //    {
+    //        if (hit.collider.gameObject.tag == "Door")
+    //        {
+    //            OpenUI.SetActive(true);
+    //        }
+    //        else
+    //        {
+    //            OpenUI.SetActive(false);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        OpenUI.SetActive(false);
+    //    }
+    //}
     #endregion
 
     #region Input Messages
@@ -94,6 +116,40 @@ public class FPSController : MonoBehaviour
         if (!enabled) return;
         inJump = true;
     }
+
+    //public float OpenDistance;
+    //public GameObject OpenUI;
+    //public string FloorDoor_Open_AnimName, FloorDoor_Close_AnimName;
+    //public bool Open = false;
+    //private void OnInteract(InputValue Interact)
+    //{
+    //    if (!enabled) return;
+    //    Debug.Log("Test");
+    //    //Ray ray = new Ray(transform.position, transform.forward);
+    //    //RaycastHit hit;
+
+    //    //if (Physics.Raycast(ray, out hit, OpenDistance))
+    //    //{
+    //    //    if (hit.collider.gameObject.tag == "Door")
+    //    //    {
+    //    //        GameObject HitDoor_Parent = hit.collider.transform.root.gameObject;
+    //    //        Animator FloorDoor_Anim = HitDoor_Parent.GetComponent<Animator>();
+
+    //    //        if (FloorDoor_Anim.GetCurrentAnimatorStateInfo(0).IsName(FloorDoor_Open_AnimName))
+    //    //        {
+    //    //            FloorDoor_Anim.ResetTrigger("Open");
+    //    //            FloorDoor_Anim.SetTrigger("Close");
+    //    //            Open = false;
+    //    //        }
+    //    //        if (FloorDoor_Anim.GetCurrentAnimatorStateInfo(0).IsName(FloorDoor_Close_AnimName))
+    //    //        {
+    //    //            FloorDoor_Anim.ResetTrigger("Close");
+    //    //            FloorDoor_Anim.SetTrigger("Open");
+    //    //            Open = true;
+    //    //        }
+    //    //    }
+    //    //}
+    //}
     #endregion
 
     private void HandleMovement()
